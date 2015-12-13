@@ -109,22 +109,7 @@ if($client){
     <input type="number" name="vat" value="" placeholder="Le numero">   
     <input type="submit" name="" value="Envoyer">
 </form> 
-<script>
-    
-var mytable = "<table cellpadding=\"0\" cellspacing=\"0\"><tbody><tr>";
 
-for (var i = 0; i < data.lenght(); i++) {
-  if (i % 3 == 1 && i != 1) {
-    mytable += "</tr><tr>";
-  }
-  mytable += "<td>[" + i + "]</td>";
-}
-
-mytable += "</tr></tbody></table>";
-
-document.write(mytable);
-
-</script>
 <script>
     var data = <?php         echo $tableauJson= json_encode($r); ?>; //Don't forget the extra semicolon!
     for (var key in data) {
